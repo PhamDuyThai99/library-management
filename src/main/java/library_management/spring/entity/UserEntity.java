@@ -20,6 +20,8 @@ public class UserEntity {
     private Long id;
     private String email;
     private String password;
+
+    @Enumerated(EnumType.STRING)
     private Role role;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
